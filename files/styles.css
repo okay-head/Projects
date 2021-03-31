@@ -1,0 +1,41 @@
+body,
+html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background: url("../files/156689-download-white-gradient-background-2447x1468-1080p.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.top p {
+  font-size: 3em;
+  margin: 7% auto;
+}
+
+.bottom div.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+img {
+  width: 280px;
+  height: 170px;
+  border: 1.5px solid black;
+}
+
+.flex div.box {
+  /* flex: 1 1 0; */
+  margin: 20px;
+}

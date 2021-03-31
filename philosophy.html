@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schools of philosophy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon"
+        href="https://www.flaticon.com/svg/vstatic/svg/2275/2275668.svg?token=exp=1610699912~hmac=44ad14c628987065e2391277e8b5fc17"
+        type="image">
+    <style>
+        /*   some border */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        .home-pg-background {
+            background-color: grey;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            margin-bottom: 1px;
+        }
+
+        .home-pg-background::before {
+            background-image: url(" https://wallpapercave.com/wp/wp1974416.jpg");
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.8;
+            content: '';
+        }
+
+        .home-pg-content h1 {
+            color: black;
+            font-size: 4em;
+            margin: 0 auto;
+            position: absolute;
+            top: 25%;
+            right: 26%;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 1px;
+        }
+
+        .home-pg-content ul {
+            list-style-type: none;
+            position: absolute;
+            right: 4%;
+            bottom: 40%;
+            /* border-left: grey solid 1px; */
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .home-pg-content ul li {
+
+            padding: 25px 35px;
+            color: black;
+            font-size: 1.5em;
+            /* background-color: #666666; */
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .home-pg-content ul .a1 {
+            border-top: 1px solid rgba(109, 110, 112, 0.692);
+            border-bottom: 1px solid rgba(109, 110, 112, 0.69);
+        }
+
+        .home-pg-content ul .a2 {
+            border-bottom: 1px solid rgba(109, 110, 112, 0.69);
+        }
+
+        .home-pg-content ul .a3 {
+            border-bottom: 1px solid rgba(109, 110, 112, 0.69);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .home-pg-content ul li:hover {
+            color: whitesmoke;
+            background-color: #666666;
+
+        }
+
+        .main-background {
+            background-color: dimgray;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* so this pseudo element is here to change the opacity of the background image without affecting the text */
+        .main-background::before {
+            background-image: url("https://images.unsplash.com/photo-1563991471891-9c8b34f9cec6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+
+            /* extra text to ensure that it works */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.7;
+            content: '';
+        }
+
+        .main-content:hover {
+            color: rgba(95, 62, 29, 1);
+        }
+
+        .main-content {
+            text-align: center;
+            color: WHITE;
+            font-family: 'Yeon Sung', cursive;
+            font-size: 6em;
+            letter-spacing: 0.2em;
+            margin: 0 auto;
+            position: relative;
+            top: 40%;
+            text-shadow: black -5px 5px, black 2px 2px, black -7px 7px, black -9px 9px;
+        }
+
+        .page-two-background {
+            background-color: rgb(128, 70, 27, 0.15);
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            border-bottom: 3px solid black;
+        }
+
+        .page-two-text img {
+            /* border: 2px solid black; */
+            width: 200px;
+            height: 250px;
+            /* position:relative;
+            top:270px; */
+            float: left;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .page-two-text {
+            margin: 0 auto;
+            position: relative;
+            top: 12%;
+            text-align: left;
+            padding: 20px;
+            font-family: 'Dosis', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .bold {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+
+        /* -------------------------  2 ---------------------------- */
+        .main-background2 {
+            background-color: dimgray;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .main-background2::before {
+            background-image: url("https://images.unsplash.com/photo-1525159831892-59d292d558b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.7;
+            content: '';
+        }
+
+        .main-content2:hover {
+            color: rgb(183,219,232, 0.7);
+        }
+
+        .main-content2 {
+            text-align: center;
+            color: whitesmoke;
+            font-family: 'Yeon Sung', cursive;
+            font-size: 6em;
+            letter-spacing: 0.2em;
+            margin: 0 auto;
+            position: relative;
+            top: 40%;
+            text-shadow: black -5px 5px, black 2px 2px, black -7px 7px, black -9px 9px;
+        }
+
+        .page-two-background2 {
+            background-color: rgb(27, 99, 128, 0.15);
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            border-bottom: 3px solid black;
+        }
+
+        .page-two-text2 img {
+            width: 200px;
+            height: 250px;
+            float: left;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .page-two-text2 {
+            margin: 0 auto;
+            position: relative;
+            top: 12%;
+            text-align: left;
+            padding: 20px;
+            font-family: 'Dosis', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .bold {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        /* -------------------------  3 ---------------------------- */
+        .main-background3 {
+            background-color: dimgray;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .main-background3::before {
+            background-image: url("https://images.unsplash.com/photo-1515375380578-a0587184cedd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.7;
+            content: '';
+        }
+
+        .main-content3:hover {
+            color: rgb(132, 135, 142);
+        }
+
+        .main-content3 {
+            text-align: center;
+            color: whitesmoke;
+            font-family: 'Yeon Sung', cursive;
+            font-size: 6em;
+            letter-spacing: 0.2em;
+            margin: 0 auto;
+            position: relative;
+            top: 45%;
+            left: 3%;
+            text-shadow: black -5px 5px, black 2px 2px, black -7px 7px, black -9px 9px;
+        }
+
+        .page-two-background3 {
+            background-color: rgb(4, 5, 5, 0.2);
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .page-two-text3 img {
+            width: 200px;
+            height: 250px;
+            float: left;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .page-two-text3 {
+            margin: 0 auto;
+            position: relative;
+            top: 12%;
+            text-align: left;
+            padding: 20px;
+            font-family: 'Dosis', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .bold {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .footer {
+            display: inline-block;
+            position: absolute;
+            right: 1%;
+            bottom: -10%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="home-pg-background" id="home">
+        <div class="home-pg-content">
+            <h1>Explore<br> the schools of<br> philosophy...</h1>
+            <ul>
+                <a href="#exist">
+                    <li class="a1">Existentialism</li>
+                </a>
+                <a href="#hedo">
+                    <li class="a2">Hedonism</li>
+                </a>
+                <a href="#nihi">
+                    <li class="a3">Nihilism</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-background" id="exist">
+        <div class="main-content"> EXISTENTIALISM </div>
+    </div>
+    <div class="page-two-background">
+
+        <div class="page-two-text"><span class="bold">E</span>xistentialism is a form of philosophical inquiry that
+            explores the problem of human existence and centers on the lived experience of the thinking, feeling, acting
+            individual. In the
+            view of the existentialist, the individual's starting point has been called "the existential angst" (or,
+            variably, existential
+            attitude, dread, etc.), or a sense of disorientation, confusion, or anxiety in the face of an apparently
+            meaningless or absurd world.
+
+            Existentialism is associated with several 19th- and 20th-century European philosophers who shared an
+            emphasis on the human subject,
+            despite profound doctrinal differences. Many existentialists regarded traditional systematic or academic
+            philosophies, in
+            style and content, as too abstract and remote from concrete human experience.
+            A primary virtue in existentialist thought is
+            authenticity. Søren Kierkegaard is generally considered to have been the first existentialist philosopher,
+            though he
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthenewheretics.files.wordpress.com%2F2009%2F12%2Fancient-philosopher.jpg&f=1&nofb=1"
+                alt="philosopher">
+            did not use the term existentialism. He proposed that each individual—not society or religion—is solely
+            responsible for giving
+            meaning to life and living it passionately and sincerely, or "authentically".
+
+
+            The main idea of existentialism during World War II was developed by Jean-Paul Sartre under the influence of
+            Dostoevsky and Martin
+            Heidegger, whom he read in a POW camp and strongly influenced many disciplines besides philosophy, including
+            theology, drama, art,
+            literature, and psychology.
+            The labels existentialism and existentialist are often seen as historical conveniences in as much as they
+            were first applied to many
+            philosophers long after they had died. While existentialism is generally considered to have originated with
+            Kierkegaard, the first
+            prominent existentialist philosopher to adopt the term as a self-description was Sartre. Sartre posits the
+            idea that "what all
+            existentialists have in common is the fundamental doctrine that existence precedes essence," as the
+            philosopher Frederick Copleston
+            explains. According to philosopher Steven Crowell, defining existentialism has been relatively
+            difficult, and he argues that it is
+
+            better understood as a general approach used to reject certain systematic philosophies rather than as a
+            systematic philosophy itself.
+            In a lecture delivered in 1945, Sartre described existentialism as "the attempt to draw all the
+            consequences from a position of
+            consistent atheism." For others, existentialism need not involve the rejection of God, but rather
+            “examines mortal wo/man’s search
+            for meaning in a meaningless universe,” considering less “What is the good life?” (to feel, be, or do,
+            good), instead asking “What is
+            life good for?”
+            Although many outside Scandinavia consider the term existentialism to have originated from
+            Kierkegaard,?] it is more likely that
+            Kierkegaard adopted this term (or at least the term "existential" as a description of his philosophy) from
+            the Norwegian poet and
+            literary critic Johan Sebastian Cammermeyer Welhaven. This assertion comes from two sources. The
+            Norwegian philosopher Erik
+            Lundestad refers to the Danish philosopher Fredrik Christian Sibbern. Sibbern is supposed to have had two
+            conversations in 1841, the
+            first with Welhaven and the second with Kierkegaard. It is in the first conversation that it is believed
+            that Welhaven came up with "a
+            word that he said covered a certain thinking, which had a close and positive attitude to life, a
+            relationship he described as
+            existential". This was then brought to Kierkegaard by Sibbern.
+            <br> <span class="footer"><a href="#home" title="navigate to the home page">back to top</a></span>
+        </div>
+
+    </div>
+
+    <!-- -------------------------2----------------------- -->
+
+    <div class="main-background2" id="hedo">
+        <div class="main-content2"> HEDONISM </div>
+    </div>
+    <div class="page-two-background2">
+
+        <div class="page-two-text2"><span class="bold">H</span>edonism is a school of thought that argues seeking
+            pleasure and
+            avoiding suffering are the only components of well-being.
+
+            Ethical hedonism is the view that combines hedonism with welfarist ethics, which claims that what we should
+            do depends exclusively on what affects the well-being of individuals. Ethical hedonists would defend either
+            increasing pleasure and reducing suffering for all beings capable of experiencing them; or just reducing
+            suffering, in the case of negative consequentialism and negative utilitarianism. Ethical hedonism is said to
+            have been started by Aristippus of Cyrene, a student of Socrates. He held the idea that pleasure is the
+            highest good.
+
+            Hedonistic ethical egoism is the idea that each person should do everything in their power to achieve the
+            greatest amount of pleasure possible to them. It is also the idea that every person's pleasure should far
+            surpass their amount of pain.
+
+            A dedicated contemporary hedonist philosopher and writer on the history of hedonistic thought is the French
+            Michel Onfray, who has
+            written two books directly on the subject, L'invention du plaisir: fragments cyréaniques and La
+            puissance d'exister : Manifeste
+            hédoniste. He defines hedonism "as an introspective attitude to life based on taking pleasure yourself
+            and pleasuring others,
+            without harming yourself or anyone else." Onfray's philosophical project is to define an ethical
+            hedonism, a joyous
+            utilitarianism, and a generalized aesthetic of sensual materialism that explores how to use the brain's and
+            the body's capacities to
+            their fullest extent—while restoring philosophy to a useful role in art, politics, and everyday life and
+            decisions."
+            Critics of hedonism have objected to its exclusive concentration on pleasure as valuable or that the
+            retentive breadth of dopamine is limited.
+
+            In particular, G. E. Moore offered a thought experiment in criticism of pleasure as the sole bearer of
+            value: he imagined two worlds—one of exceeding beauty and the other a heap of filth. Neither of these worlds
+            will be experienced by anyone. The question then is if it is better for the beautiful world to exist than
+            the heap of filth. In this, Moore implied that states of affairs have value beyond conscious pleasure, which
+            he said spoke against the validity of hedonism.
+
+            Perhaps the most famous objection to hedonism is Robert Nozick's famous experience machine. Nozick asks us
+            to hypothetically imagine a machine that will allow us to experience whatever we want—if we want to
+            experience making friends, it will give this to us. Nozick claims that by hedonistic logic, we should remain
+            in this machine for the rest of our lives. However, he gives three reasons why this is not a preferable
+            scenario: firstly, because we want to do certain things, as opposed to merely experience them; secondly, we
+            want to be a certain kind of person, as opposed to an 'indeterminate blob' and thirdly, because such a thing
+            would limit our experiences to only what we can imagine. Peter Singer, a hedonistic utilitarian, and
+            Katarzyna de Lazari-Radek have both argued against such an objection by saying that it only provides an
+            answer to certain forms of hedonism, and ignores others.
+            <br><span class="footer"><a href="#home" title="navigate to the home page">back to top</a></span>
+        </div>
+
+    </div>
+
+
+    <!-- -------------------------3----------------------- -->
+
+    <div class="main-background3" id="nihi">
+        <div class="main-content3"> NIHILISM </div>
+    </div>
+    <div class="page-two-background3">
+
+        <div class="page-two-text3"><span class="bold">N</span>ihilism is a
+            philosophy, or family of views within philosophy, expressing some form of negation towards life or
+            towards fundamental concepts such as knowledge, existence, and the meaning of life. Different nihilist
+            positions hold variously that human values are baseless, that life is meaningless, that knowledge is
+            impossible, or that some set of entities does not exist.
+
+            The study of nihilism may regard it as merely a label that has been applied to various separate
+            philosophies, or as a distinct historical concept arising out of nominalism, skepticism, and
+            philosophical pessimism, as well as possibly out of Christianity itself. Contemporary understanding of
+            the idea stems largely from the Nietzschean 'crisis of nihilism', from which derives the two central
+            concepts: the destruction of higher values and the opposition to the affirmation of life. Earlier
+            forms of nihilism however, may be more selective in negating specific hegemonies of social, moral, political
+            and aesthetic thought. Beyond Europe, elements of Buddhist scripture have been identified as among the
+            earliest discourses and critiques of nihilistic thought.
+
+            The term is sometimes used in association with anomie to explain the general mood of despair at a perceived
+            pointlessness of existence or arbitrariness of human principles and social institutions. Nihilism has also
+            been described as conspicuous in or constitutive of certain historical periods. For example, Jean
+            Baudrillard and others have characterized postmodernity as a nihilistic epoch or mode of
+            thought. Likewise, some theologians and religious figures have stated that postmodernity and many
+            aspects of modernity represent nihilism by a negation of religious principles. Nihilism has, however,
+            been widely ascribed to both religious and irreligious viewpoints.
+
+            In popular use, the term commonly refers to forms of existential nihilism, according to which life is
+            without intrinsic value, meaning, or purpose. Other prominent positions within nihilism include the
+            rejection of all normative and ethical views (§ Moral nihilism), the rejection of all social and political
+            institutions, the stance that no knowledge can or does exist (§ Epistemological
+            nihilism), and a number of metaphysical positions, which assert that non-abstract objects do not exist, that
+            composite objects do not exist, or even that life
+            itself does not exist.
+            The term "nihilism" was actually popularized in 1862 by Ivan Turgenev in his novel Fathers and Sons, whose
+            hero, Bazarov, was a nihilist and recruited several followers to the philosophy. He found his nihilistic
+            ways challenged upon falling in love.
+
+            Anton Chekhov portrayed nihilism when writing Three Sisters. The phrase "what does it matter" or variants of
+            this are often spoken by several characters in response to events; the significance of some of these events
+            suggests a subscription to nihilism by said characters as a type of coping strategy.
+
+            The philosophical ideas of the French author, the Marquis de Sade, are often noted as early examples of
+            nihilistic principles.
+            <br><span class="footer"><a href="#home" title="navigate to the home page">back to top</a></span>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="img/png" href="../mobile-152-163219.ico">
+    <!--favicon-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>Responsive layout 1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .top {
+            font-size: 1.2em;
+            display: flex;
+            flex-flow: row wrap;
+            flex: 1 1 0;
+            justify-content: space-evenly;
+            background-color: #71a3a8f2;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .top .one {
+            font-size: 2em;
+            font-weight: bold;
+            width: 100%;
+        }
+        .top .two{
+            margin: 0 15%;
+            /* padding: 0 240px; */
+            padding-top: 20px;
+        }
+        .top>div {
+            flex: auto;
+        }
+        .content .row0,
+        .content .row1,
+        .content .row2,
+        .content .row3 {
+            display: flex;
+            flex-flow: row wrap;
+            /*NO shit no comma in between row and wrap*/
+            width: 98%;
+            margin: 0 auto;
+        }
+
+        .box {
+            flex: 1 1 300px;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            /* border: 1px solid black; */
+        }
+
+        .content h2{
+            margin-bottom: 9px;
+        }
+
+        .content h2:hover{
+            text-decoration: underline;
+            
+        }
+        .content .row0 .box-1{
+            flex: 1 1 750px;
+        }
+
+        /* .content{
+                display: flex;
+                } */
+
+
+        div.footer{
+            height: 2%;
+            padding: 30px;
+            margin-top: 20px;
+            text-align: center;
+            background-color: rgb(66, 65, 65);
+            color: white;
+            font-family: inherit;
+            font-weight: lighter;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- let's create a 3x3 layout first -->
+
+    <div class="top">
+        <div class="one">Article layout 1</div><br><!-- <span><sub>using <del>grid</del> flexboxes</sub></span>-->
+        <div class="two">This layout is created using flexbox. Flexbox provides the ability to dynamically change the
+            layout for different screen resolutions. </div>
+    </div>
+    <div class="content">
+        <div class="row0">
+            <div class="box box-1">
+                <h2>Article -1</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam, voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur
+                exercitationem, quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id,
+                consectetur possimus expedita iste illum omnis sint facere placeat nemo perspiciatis similique animi?
+                Repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores nam impedit
+                voluptatibus tempore excepturi quasi, nemo ipsum fugiat voluptatem non unde nobis! Quis repellat
+                corporis in obcaecati ipsum.
+            </div>
+            <div class="box">
+                <h2>Article 0</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam, voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur
+                exercitationem, quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Ex laboriosam sapiente odit? 
+            </div>
+        </div>
+        <div class="row1">
+            <div class="box box1">
+                <h2>Article 1</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam, voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur
+                exercitationem, quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id,
+                consectetur possimus expedita iste illum omnis sint facere placeat nemo perspiciatis similique animi?
+                Repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores nam impedit
+                voluptatibus tempore excepturi quasi, nemo ipsum fugiat voluptatem non unde nobis! Quis repellat
+                corporis in obcaecati ipsum.
+            </div>
+            <div class="box box2">
+                <h2>Article 2</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam, voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur
+                exercitationem, quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id,
+                consectetur possimus expedita iste illum omnis sint facere placeat nemo perspiciatis similique animi?
+                Repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores nam impedit
+                voluptatibus tempore excepturi quasi, nemo ipsum fugiat voluptatem non unde nobis! Quis repellat
+                corporis in obcaecati ipsum.
+            </div>
+            <div class="box box3">
+                <h2>Article 3</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam, voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur
+                exercitationem, quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id,
+                consectetur possimus expedita iste illum omnis sint facere placeat nemo perspiciatis similique animi?
+                Repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores nam impedit
+                voluptatibus tempore excepturi quasi, nemo ipsum fugiat voluptatem non unde nobis! Quis repellat
+                corporis in obcaecati ipsum.
+            </div>
+        </div>
+
+        <div class="row2">
+            <div class="box box4">
+                <h2>Article 4</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam,
+                voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur exercitationem,
+                quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id, consectetur possimus
+                expedita
+                iste illum omnis sint facere placeat nemo perspiciatis similique animi? Repudiandae. Lorem ipsum dolor
+                sit
+                amet, consectetur adipisicing elit. Aliquam asperiores nam impedit voluptatibus tempore excepturi quasi,
+                nemo ipsum fugiat voluptatem non unde nobis! Quis repellat corporis in obcaecati ipsum.
+            </div>
+            <div class="box box5">
+                <h2>Article 5</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam,
+                voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur exercitationem,
+                quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id, consectetur possimus
+                expedita
+                iste illum omnis sint facere placeat nemo perspiciatis similique animi? Repudiandae. Lorem ipsum dolor
+                sit
+                amet, consectetur adipisicing elit. Aliquam asperiores nam impedit voluptatibus tempore excepturi quasi,
+                nemo ipsum fugiat voluptatem non unde nobis! Quis repellat corporis in obcaecati ipsum.
+            </div>
+            <div class="box box6">
+                <h2>Article 6</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam,
+                voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur exercitationem,
+                quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id, consectetur possimus
+                expedita
+                iste illum omnis sint facere placeat nemo perspiciatis similique animi? Repudiandae. Lorem ipsum dolor
+                sit
+                amet, consectetur adipisicing elit. Aliquam asperiores nam impedit voluptatibus tempore excepturi quasi,
+                nemo ipsum fugiat voluptatem non unde nobis! Quis repellat corporis in obcaecati ipsum.
+            </div>
+        </div>
+        <div class="row3">
+            <div class="box box7">
+                <h2>Article 7</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam,
+                voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur exercitationem,
+                quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id, consectetur possimus
+                expedita
+                iste illum omnis sint facere placeat nemo perspiciatis similique animi? Repudiandae. Lorem ipsum dolor
+                sit
+                amet, consectetur adipisicing elit. Aliquam asperiores nam impedit voluptatibus tempore excepturi quasi,
+                nemo ipsum fugiat voluptatem non unde nobis! Quis repellat corporis in obcaecati ipsum.
+            </div>
+            <div class="box box8">
+                <h2>Article 8</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam,
+                voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur exercitationem,
+                quas, voluptatem explicabo maxime, dolorem magnam sed ea consectetur. Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id, consectetur possimus
+                expedita
+                iste illum omnis sint facere placeat nemo perspiciatis similique animi? Repudiandae. Lorem ipsum dolor
+                sit
+                amet, consectetur adipisicing elit. Aliquam asperiores nam impedit voluptatibus tempore excepturi quasi,
+                nemo ipsum fugiat voluptatem non unde nobis! Quis repellat corporis in obcaecati ipsum.
+            </div>
+            <div class="box box9">
+                <h2>Article 9</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quibusdam.
+                Quam,
+                voluptatem. Consequatur corrupti blanditiis dolores repudiandae quis voluptates pariatur exercitationem,
+                quas, voluptatem explicabo maxime, dolorem magnam sed rea consectetur. Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Ex laboriosam sapiente odit? Ratione fugit consequatur id, consectetur possimus
+                expedita
+                iste illum omnis sint facere placeat nemo perspiciatis similique animi? Repudiandae. Lorem ipsum dolor
+                sit
+                amet, consectetur adipisicing elit. Aliquam asperiores nam impedit voluptatibus tempore excepturi quasi,
+                nemo ipsum fugiat voluptatem non unde nobis! Quis repellat corporis in obcaecati ipsum.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &#169 All rights reserved
+    </div>
+</body>
+
+</html>
