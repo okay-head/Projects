@@ -19,20 +19,24 @@ body {
 
 .top p {
   font-size: 3em;
-  margin: 7% auto;
+  margin: 4% auto;
 }
 
 .bottom div.flex {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
 }
 
 img {
-  width: 280px;
-  height: 170px;
+  width: 370px;
+  height: 230px;
   border: 1.5px solid black;
+}
+
+img:hover{
+  opacity: 0.8;
 }
 
 .flex div.box {
