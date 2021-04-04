@@ -20,6 +20,21 @@ body {
    font-family: 'Mouse Memoirs', sans-serif;
    font-size: 1.7em;
 }
+
+#burger img{
+   position: absolute;
+   width: 25px;
+   height: 25px;
+   top: 17px;
+   right: 16px;
+   z-index: 1;
+   /* display: none; */
+}
+#burger{display: none;}
+
+#burger img:hover{
+   cursor:pointer;
+}
 nav {
    width: 32%;
    margin: 1% auto;
@@ -76,7 +91,7 @@ img {
 }
 .bottom{
    position: absolute;
-    top: 65%;
+   top: 65%;
    left:39%;
    border: 1px  solid white;
    padding: 5px 15px;
@@ -96,9 +111,20 @@ img {
    font-size: 0.5em;
 }
 
+.active {
+   display: block;
+ }
+ 
 @media only screen and (max-width:991px){
-   /* nav{display: none;} */
    .container .flex{flex-basis:50%;}
+   nav {display: none;}
+    nav ul{
+      flex-flow: column nowrap;
+      margin-top:3.5em;
+      text-align: center;
+   }
+   /* .box {flex-basis: 100%;} */
+   #burger{display: block;}
 }
 @media only screen and (max-width:550px){
    /* nav{display: none;} */
