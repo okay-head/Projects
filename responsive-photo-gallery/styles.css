@@ -106,9 +106,13 @@ img {
 }
 
 .attributions{
-   margin: 40px 30px;
-   margin-top: 300px;
+
+   margin-top: 150px;
+   padding: 3em 2em;
+   font-weight: bold;
+   color: black;
    font-size: 0.5em;
+   background-color: white;
 }
 
 .active {
