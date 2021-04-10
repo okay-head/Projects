@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+
+      body,html{
+         height: 100%;
+      }
+
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      div.one{
+         width: 100%;
+         height: 100%;
+         background-color: white;
+         font-size: 5em;
+         position: relative;
+         z-index: 1;
+         
+      }
+
+      div.one::before{
+         content: '';
+         width: 100%;
+         height: 100%;
+         background: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wallpapers13.com%2Fwp-content%2Fuploads%2F2018%2F06%2FNature-Landscape-Autumn-Colors-Forests-trees-river-rocks-green-moss-Ultra-HD-4K-Computer-Wallpapers-5000x2813.jpg&f=1&nofb=1") no-repeat center;
+         background-size: cover;
+         position: absolute;
+         top:0;
+         bottom:0;
+         right: 0;
+         left: 0;
+         opacity: 0.1;
+         z-index: -3;
+      }
+      div.two{
+         width: 100%;
+         height: 100%;
+         background-color: grey;
+         top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+      }
+
+      div.three{
+         width: 100%;
+         height: 100%;
+         background-color: white;
+         display: flex;
+         justify-content: center;
+         align-items: center ;
+      }
+
+      .three>div{
+         width: 300px;
+         height: 150px;
+         margin: 1em;
+         color: white;
+         background-color: black;
+         transition: all .5s ease; 
+         transform: scale(0);
+         /* display: inline-block; */
+         /* flex: 0 0 auto; */
+      }
+
+      div.three:hover div{
+         transform: scale(1);
+      }
+
+
+   </style>
+</head>
+<body>
+   <div class="one"><!--full page bg image-->
+   <img src="/../../Downloads/thom-holmes-k-xKzowQRn8-unsplash.jpg" width="150px" height="150px" alt="">
+   afjhalkajflafj
+   </div>
+    <div class="two"><!--same--></div> 
+   <div class="three">
+      <div class="a1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repudiandae nulla quasi, possimus voluptatibus facilis nisi? Totam et sapiente vero perspiciatis laboriosam dolor culpa id, alias officia rerum, repellendus excepturi.</div>
+      <div class="a2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, eius. Quae, eum. Quasi aliquid quaerat facilis labore molestias! Animi excepturi, provident deleniti et placeat voluptatibus quae ratione quasi sit vero.</div>
+      <div class="a3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, nam? Facere explicabo sequi nobis vero placeat aperiam ullam repellendus incidunt quae laboriosam minima laudantium, debitis veritatis quaerat culpa adipisci exercitationem.</div>
+   </div>
+</body>
+</html>

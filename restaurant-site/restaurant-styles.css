@@ -1,0 +1,369 @@
+/* body */
+
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+/* home */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+body,html{
+   height: 100%;
+   color: white;
+   /* font-family: 'Vollkorn', serif; */
+   font-family: 'Raleway', sans-serif;
+   letter-spacing: 1px;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+.home-bg{
+   position: relative;
+   height: 100%;
+}
+
+.home-bg::before{
+   content: '';
+   position: absolute;
+   background: url("final.jfif") no-repeat center;
+   background-size: cover;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   opacity: 0.95;
+   z-index: -3;
+}
+
+.home-content{
+   padding-top: 1%;
+   /* position: relative; */
+}
+nav{
+   background-color: rgba(0, 0, 0, 0.808);
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* justify-content: space-between; won't work since the flex basis properties are set*/
+   /* to push elements inside but to keep the nav in place; The correct way! */
+   /* padding: 0 10%; */
+}
+
+
+
+a{
+   text-decoration: none;
+   color: inherit;
+   padding: 22px 25px;
+   display: inline-block;
+   text-transform: uppercase;
+}
+
+a:hover{
+   background-color: black;
+}
+
+.center-txt{
+   display: inline-block;
+   font-size: 11em;
+   font-family: 'Kaushan Script', cursive;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+
+/* ___about___ */
+.about{
+   height: 100%;
+   padding: 5em 8em;
+   display: flex;
+   /* align-items: center; */
+}
+
+
+.about-box,.contact-box{
+   overflow: hidden;
+   padding: 4em 5em;
+   
+   /* padding-top: ; */
+   /* push using padding on outer element */
+   position: relative;
+}
+
+.heading{
+   font-size: 6rem;
+   margin-bottom: 0.5em;
+}
+
+.about-box div.bottom{
+   display: flex;
+   align-items: center;
+}
+.about-box div p#p1{
+   flex-basis: 30%;
+}
+.about-box div p#p2{
+   flex-basis: 70%;
+}
+.about-box div img{
+   width: 400px;
+   height: 300px;
+   margin: 0 80px 20px 0;
+}
+
+
+/*______ top dishes_____ */
+
+.top-dishes{
+   height: 100%;
+   padding: 5em;
+   display: flex;
+}
+
+img{
+   width: 100%;
+   height: 100%;
+   opacity: 0.95;
+}
+/* .left, .right{
+   flex-basis: 50%;
+} */
+
+.left{
+   background-color: rgba(0, 0, 0, 0.897);
+   margin:0 0.5em;
+   flex-basis: 40%;
+   /* for child */
+   font-size: 5em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.right{
+   flex-basis: 60%;
+   /* for child */
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+}
+.right>div{
+   width: 150px;
+   height: 250px;
+   margin: 1em;
+   padding: 4px;
+   border: 2px solid black;   
+}
+
+
+.right .a1,
+.right .a2,
+.right .a3{
+   position: relative;
+}
+.right .a1{
+   flex-basis: 60%;
+}
+
+.right .a1::after, 
+.right .a2::after,
+.right .a3::after{
+   /* content: "tomato slice"; */
+   display: inline-block;
+   position: absolute;
+   /* font-size: 1.5em; */
+   font-weight: bold;
+   top: 45%;
+   left: 33%;
+   /* transform: translate(-50%k,-50%); */
+   transform: scale(0);
+   transition: ease 200ms all;
+   z-index: 2;
+}
+
+.right .a1::after{
+   content: "Epizoa special";
+   left: 36%;
+}
+.right .a2::after{
+   content: "Salami and beans";
+   left: 29%;
+}
+.right .a3::after{
+   content: "Exotica";
+   top:46%;
+   left: 43%;
+}
+
+
+
+.right .a1:hover::after, 
+.right .a2:hover::after,
+.right .a3:hover::after{
+      transform: scale(1);
+}
+
+
+.right .a1:hover:before, 
+.right .a2:hover:before,
+.right .a3:hover:before{
+   content: '';
+   display: inline-block;
+   position: absolute;
+   background-color: black;
+   opacity: 0.5;
+   z-index: 1;
+   width: 98%;
+   height: 97%;
+   z-index:1;
+   /* position: ; */
+}
+ .right .a2{
+   flex-basis: 44%;
+}
+.right .a3{
+   flex-basis: 46%; 
+}
+
+/*____ reviews ____*/
+
+.reviews{
+   height: 100%;
+   display: flex;
+   padding: 5em;
+
+}
+
+.review-boxes{
+   flex-basis: 50%;
+   padding: 5em 2em;
+   border: 2px solid black;
+   background-color: rgba(128, 128, 128, 0.062);
+   /* background-color: #b8733315; */
+   /* background-color: #b873332d; */
+      /* background-color:  #C2B280; */
+   /* background-color:   #644732 */
+   ;
+   border-radius: 1%;
+
+   /* for child */
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+
+   /* border: 1px solid black; */
+}
+
+.review-boxes>div{
+   color: black;
+   flex-basis: 40%;
+   margin: 1.5em 1em;
+   position: relative;
+}
+
+.review-boxes>div>p:nth-child(2){
+   margin-top: 10px;
+   /* color: rgba(255, 30, 0, 0.883); */
+   color: rgb(165, 42, 42);
+   font-weight:900;
+}
+
+.review-boxes>div>p:first-child::before{
+   content: '"';
+   font-size: 3em;
+   position: absolute;
+   top: -8%;
+   left: -8%;
+}
+
+.review-boxes>div>p:first-child::after{
+   content: " ''";
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+.review-boxes>div>p>img{
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+}
+.review-boxes>div>p>span{
+   font-size: 19px;
+} 
+
+
+.reviews .left{
+   font-size: 5em;
+}
+
+.contact{
+   font-size: 1.5em;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.contact-box{
+   height: 75%;
+   width: 85%;
+}
+
+.contact-box .heading{
+   text-align: center;
+   margin-top: -5%;
+   margin-bottom: 10%;
+}
+
+.contact-box span{
+   color: black;
+   background-color: white;
+   padding: 5px 15px;
+   margin-right: 15px;
+}
+
+.phone,.email{
+   display: inline-block;
+   margin: 30px;
+   margin-left: 12%;
+
+}
+
+
+.about-box, .contact-box, .left{
+   background: rgba(0, 0, 0, 0.897);
+}
+
+.icons{
+   height: 45px;
+   margin-top: 12%;
+   text-align: center;
+}
+
+.icons span.icon{
+   display: inline-block;
+   background-color: inherit;
+   padding: 0;
+   height: 100%;
+   margin:0 12px;
+}
+.icons img{
+   /* background-color: white; */
+   border-radius: 20%;
+   width: 45px;
+   height: 100%;
+   /* backgro6und-color: white; */
+}
+
+
