@@ -17,9 +17,14 @@ body {
   background-size: cover;
 }
 
-.top p {
+.top p:first-child {
   font-size: 3em;
-  margin: 4% auto;
+  margin: 3% auto 0.5% auto;
+}
+
+.top p:nth-child(2){
+  margin: 1% auto 3% auto;
+  font-size: 15px;
 }
 
 .bottom div.flex {
