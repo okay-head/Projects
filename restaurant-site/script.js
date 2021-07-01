@@ -1,1 +1,1 @@
-alert(" Make sure your zoom is 100%!");
+// alert(" Make sure your zoom is 100%!");

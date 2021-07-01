@@ -1,4 +1,4 @@
-alert(" Fully responsive\n Try resizing the browser window")
+// alert(" Fully responsive\n Try resizing the browser window")
 
 let mainNav = document.getElementById('js-menu');
 let navBarToggle = document.getElementById('burger');
