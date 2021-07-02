@@ -38,7 +38,7 @@ body {
 img {
   width: 370px;
   height: 230px;
-  border: 1.5px solid black;
+  /* border: 1.5px solid black; */
 }
 
 img:hover{
