@@ -124,10 +124,6 @@ img{
    height: 100%;
    opacity: 0.95;
 }
-/* .left, .right{
-   flex-basis: 50%;
-} */
-
 .left{
    background-color: rgba(0, 0, 0, 0.897);
    margin:0 0.5em;
@@ -168,14 +164,11 @@ img{
 .right .a1::after, 
 .right .a2::after,
 .right .a3::after{
-   /* content: "tomato slice"; */
    display: inline-block;
    position: absolute;
-   /* font-size: 1.5em; */
    font-weight: bold;
    top: 45%;
    left: 33%;
-   /* transform: translate(-50%k,-50%); */
    transform: scale(0);
    transition: ease 200ms all;
    z-index: 2;
