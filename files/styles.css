@@ -19,8 +19,8 @@ body {
 }
 
 .top p:first-child {
-  font-size: 3em;
-  margin: 3% auto 0.5% auto;
+  font-size: 1.8em;
+  margin: 3% auto 3.5% auto;
 }
 
 .top p:nth-child(2){
