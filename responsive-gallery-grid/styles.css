@@ -8,12 +8,9 @@ body{
 }
 
 .container{
-   /* background-color: brown; */
    margin: 2em;
    display: grid;
    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
-   /* grid-template-rows:repeat(auto-fit,minmax(93px,1fr)); */
-   /* grid-template-rows: repeat(6,220px); */
    grid-auto-rows: 280px;
    gap: 10px;
    grid-auto-flow: dense;
