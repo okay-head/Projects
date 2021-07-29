@@ -1,3 +1,5 @@
+/* Blur filter is turned off in firefox by default, try opening with chrome */
+
 body,html,.container,img{
    height: 100%;
 }
