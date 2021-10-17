@@ -14,6 +14,7 @@ html {
 body {
   /* background: url("../files/156689-download-white-gradient-background-2447x1468-1080p.jpg")
     no-repeat; */
+    overflow: hidden;
     background: linear-gradient(to bottom right, rgb(160, 160, 160),rgb(173, 172, 172));
     background-size: cover;
 }
